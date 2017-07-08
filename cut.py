@@ -7,7 +7,7 @@ import pickle
 import matplotlib.pyplot as plt
 
 import numpy as np
-with open("\root\comML\RML2016.10a_dict.dat",'rb') as xd1:
+with open("/root/comML/RML2016.10a_dict.dat",'rb') as xd1:
 
     Xd = pickle.load(xd1,encoding='latin1')
 snrs,mods = map(lambda j: sorted(list(set(map(lambda x: x[j], Xd.keys())))), [1,0])
