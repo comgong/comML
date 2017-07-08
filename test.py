@@ -15,7 +15,7 @@ import pickle, random, sys, keras
 import h5py
 
 #%%
-with open("\root\comML\RML2016.10a_dict.dat",'rb') as xd1: #这段执行对原始数据进行切片的任务，可在spyder下运行，查看变量
+with open("/root/comML/RML2016.10a_dict.dat",'rb') as xd1: #这段执行对原始数据进行切片的任务，可在spyder下运行，查看变量
     Xd = pickle.load(xd1,encoding='latin1')
 snrs,mods = map(lambda j: sorted(list(set(map(lambda x: x[j], Xd.keys())))), [1,0])
 X = []  
