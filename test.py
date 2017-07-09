@@ -48,10 +48,10 @@ classes = mods
 dr = 0.5 # dropout rate (%) 卷积层部分  https://keras-cn.readthedocs.io/en/latest/layers/convolutional_layer/#conv2d
 model = models.Sequential() #这里使用keras的序贯模型  https://keras-cn.readthedocs.io/en/latest/models/sequential/
 model.add(Reshape(([1]+in_shp), input_shape=in_shp))
-model.add(ZeroPadding2D((0, 2),data_format="channels_first"))
+model.add(ZeroPadding2D((0, 2)))
 model.add(Conv2D(256, (1, 3),padding='valid', activation="relu", name="conv1", init='glorot_uniform',data_format="channels_first"))
 model.add(Dropout(dr))
-model.add(ZeroPadding2D((0, 2),data_format="channels_first"))
+model.add(ZeroPadding2D((0, 2)))
 model.add(Conv2D(80, (2, 3), padding="valid", activation="relu", name="conv2", init='glorot_uniform',data_format="channels_first"))
 model.add(Dropout(dr))
 model.add(Flatten())
