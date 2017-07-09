@@ -67,7 +67,7 @@ model.summary()
 epochs = 100     # number of epochs to train on
 batch_size = 1024  # training batch size default1024
 #%%
-filepath = "convmodrecnets_CNN2_0.5.wts.h5"
+filepath = "/root/comML/convmodrecnets_CNN2_0.5.wts.h5"
 model.load_weights(filepath)
 score = model.evaluate(X_test, Y_test, verbose=0, batch_size=batch_size)
 print(score)
