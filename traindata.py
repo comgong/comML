@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import os,random
-os.environ["KERAS_BACKEND"] = "tensorflow"
+os.environ["KERAS_BACKEND"] = "theano"
+os.environ["THEANO_FLAGS"]  = "device=gpu%d"%(1)
 import numpy as np
 from keras.utils import np_utils
 import keras.models as models
